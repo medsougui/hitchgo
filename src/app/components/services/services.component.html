@@ -1,0 +1,86 @@
+<div class="hitchgo-trip-planner">
+  <div class="hitchgo-tabs">
+    <button class="hitchgo-tab" [class.active]="activeTab === 'search'" (click)="setActiveTab('search')">
+      {{ labels.findRide }}
+    </button>
+    <button class="hitchgo-tab" [class.active]="activeTab === 'create'" (click)="setActiveTab('create')">
+      {{ labels.offerRide }}
+    </button>
+  </div>
+
+  <div id="search-tab" class="hitchgo-tab-content" [class.active]="activeTab === 'search'">
+    <h2 class="hitchgo-planner-title">{{ labels.findAvailableRides }}</h2>
+    <form class="hitchgo-form" (ngSubmit)="searchRides()">
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.departure }}</label>
+        <input type="text" class="hitchgo-form-control" placeholder="e.g. Nabeul"
+               ngModel="searchForm.departure" name="departure">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.destination }}</label>
+        <input type="text" class="hitchgo-form-control" placeholder="e.g. Tunis"
+               ngModel="searchForm.arrival" name="arrival">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.travelDate }}</label>
+        <input type="date" class="hitchgo-form-control"
+               ngModel="searchForm.date" name="date">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.passengers }}</label>
+        <input type="number" min="1" class="hitchgo-form-control"
+               ngModel="searchForm.passengers" name="passengers">
+      </div>
+      <div class="hitchgo-btn-container">
+        <button type="submit" class="hitchgo-btn">{{ labels.search }}</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="create-tab" class="hitchgo-tab-content" [class.active]="activeTab === 'create'">
+    <h2 class="hitchgo-planner-title">{{ labels.offerYourRide }}</h2>
+    <form class="hitchgo-form" (ngSubmit)="publishRide()">
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.departure }}</label>
+        <input type="text" class="hitchgo-form-control" placeholder="e.g. Nabeul"
+               ngModel="createForm.departure" name="departure">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.destination }}</label>
+        <input type="text" class="hitchgo-form-control" placeholder="e.g. Tunis"
+               ngModel="createForm.arrival" name="arrival">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.travelDate }}</label>
+        <input type="date" class="hitchgo-form-control"
+               ngModel="createForm.date" name="date">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.time }}</label>
+        <input type="time" class="hitchgo-form-control"
+               ngModel="createForm.time" name="time">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.seats }}</label>
+        <input type="number" min="1" class="hitchgo-form-control"
+               ngModel="createForm.seats" name="seats">
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.price }}</label>
+        <div class="hitchgo-input-group">
+          <input type="number" step="0.5" min="0" class="hitchgo-form-control"
+                 ngModel="createForm.price" name="price">
+          <span class="hitchgo-input-group-text">{{ labels.currency }}</span>
+        </div>
+      </div>
+      <div class="hitchgo-form-group">
+        <label class="hitchgo-form-label">{{ labels.notes }}</label>
+        <textarea class="hitchgo-form-control" placeholder="Add any details..."
+                  ngModel="createForm.notes" name="notes"></textarea>
+      </div>
+      <div class="hitchgo-btn-container">
+        <button type="submit" class="hitchgo-btn">{{ labels.publish }}</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+<nav class="hitchgo-navbar" id="hitchgoNavbar">
+  <div class="hitchgo-navbar-container">
+    <a class="hitchgo-brand" routerLink="/">
+      HITCHG<span class="hitchgo-tire-icon"></span>
+    </a>
+    
+    <button class="hitchgo-toggler" type="button" onclick="toggleNavbar()">
+      <span class="hitchgo-toggler-icon"></span>
+    </button>
+    
+    <div class="hitchgo-navbar-collapse" id="hitchgoNavbarContent">
+      <ul class="hitchgo-nav-list">
+        <li class="hitchgo-nav-item">
+          <a class="hitchgo-nav-link" routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">{{ labels.home }}</a>
+        </li>
+        <li class="hitchgo-nav-item">
+          <a class="hitchgo-nav-link" routerLink="/about" routerLinkActive="active">{{ labels.about }}</a>
+        </li>
+        <li class="hitchgo-nav-item">
+          <a class="hitchgo-nav-link" routerLink="/services" routerLinkActive="active">{{ labels.services }}</a>
+        </li>
+        <li class="hitchgo-nav-item">
+          <a class="hitchgo-nav-link" routerLink="/contact" routerLinkActive="active">{{ labels.contact }}</a>
+        </li>
+        <li class="hitchgo-nav-item">
+          <a class="hitchgo-nav-link" routerLink="/blog" routerLinkActive="active">{{ labels.blog }}</a>
+        </li>
+        <div class="dropdown lang-dropdown">
+  <button class="dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <img src="{{ currentLang === 'en' ? '/assets/GB.png' : '/assets/SP.png' }}" alt="Language" class="flag-icon">
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="langDropdown">
+    <li><a class="dropdown-item"  (click)="setLang('en')">
+      <img src="/assets/GB.png" alt="English" class="flag-icon"> 
+    </a></li>
+    <li><a class="dropdown-item"  (click)="setLang('es')">
+      <img src="/assets/SP.png" alt="Español" class="flag-icon">
+    </a></li>
+  </ul>
+</div>
+
+      </ul>
+    </div>
+    
+  </div>
+</nav>
+
+<!-- Spacer to prevent content from hiding behind fixed navbar -->
+<div class="hitchgo-navbar-spacer"></div>
+
+<style>
+  /* Flag icon styling */
+  .flag-icon {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+    vertical-align: middle;
+  }
+  
+  /* Make dropdown items with flags more centered and visually appealing */
+  .dropdown-item {
+    display: flex;
+    justify-content: center;
+    padding: 8px 12px;
+  }
+</style>
+
+<script>
+  // Function to toggle mobile navbar
+  function toggleNavbar() {
+    const navbarContent = document.getElementById('hitchgoNavbarContent');
+    navbarContent.classList.toggle('show');
+  }
+  
+  // Add scrolled class on scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('hitchgoNavbar');
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+  // Only highlight home when it's the exact path
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.hitchgo-nav-link');
+    
+    navLinks.forEach(link => {
+      // Remove active class initially
+      link.classList.remove('active');
+      
+      // Only add active class if paths match exactly
+      const linkPath = link.getAttribute('routerLink');
+      if ((linkPath === '/' && currentPath === '/') || 
+          (linkPath !== '/' && currentPath.startsWith(linkPath))) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>

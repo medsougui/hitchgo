@@ -1,0 +1,128 @@
+
+  /* HITCHGO Contact Form Styles */
+  .hitchgo-contact {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 20px;
+  }
+  
+  .hitchgo-contact-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hitchgo-contact-header {
+    background: linear-gradient(135deg, #1e9a30 0%, #32c347 100%);
+    padding: 2.5rem;
+    color: white;
+    position: relative;
+  }
+  
+  .hitchgo-contact-header::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hitchgo-contact-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .hitchgo-contact-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hitchgo-contact-form {
+    padding: 2.5rem;
+  }
+  
+  .hitchgo-form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hitchgo-form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .hitchgo-form-label small {
+    color: #1e9a30;
+    font-weight: bold;
+  }
+  
+  .hitchgo-form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9fcfa;
+    transition: all 0.3s ease;
+  }
+  
+  .hitchgo-form-control:focus {
+    outline: none;
+    border-color: #1e9a30;
+    box-shadow: 0 0 0 3px rgba(30, 154, 48, 0.1);
+  }
+  
+  textarea.hitchgo-form-control {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .hitchgo-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e9a30 0%, #32c347 100%);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(30, 154, 48, 0.2);
+  }
+  
+  .hitchgo-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 154, 48, 0.3);
+  }
+  
+  .hitchgo-btn:active {
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hitchgo-contact-header {
+      padding: 2rem 1.5rem;
+    }
+    
+    .hitchgo-contact-form {
+      padding: 2rem 1.5rem;
+    }
+    
+    .hitchgo-contact-title {
+      font-size: 1.8rem;
+    }
+  }

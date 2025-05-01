@@ -1,0 +1,22 @@
+<!-- blog-post-detail.component.html -->
+
+
+<div class="hitchgo-blog-detail" *ngIf="blogPost">
+  <div class="hitchgo-blog-detail-header">
+    <h2 class="hitchgo-blog-detail-title">{{ blogPost.title }}</h2>
+    <div class="hitchgo-blog-detail-meta">
+      By&nbsp;<span class="hitchgo-blog-detail-author">{{ blogPost.author }}</span> &nbsp;•&nbsp; {{ blogPost.publishDate | date:'longDate' }}
+    </div>
+  </div>
+  
+  <img *ngIf="blogPost.imageUrl" [src]="blogPost.imageUrl" class="hitchgo-blog-detail-image" alt="{{ blogPost.title }}">
+  <div *ngIf="!blogPost.imageUrl" class="hitchgo-blog-detail-placeholder">
+    <span class="hitchgo-blog-detail-placeholder-icon">📝</span>
+  </div>
+  
+  <div class="hitchgo-blog-detail-content">
+    {{ blogPost.content }}
+  </div>
+  
+  <a routerLink="/blog" class="hitchgo-blog-back-link">Back to Blog</a>
+</div>

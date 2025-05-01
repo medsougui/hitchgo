@@ -1,0 +1,222 @@
+/* services.component.css */
+/* HITCHGO Trip Planner Styles */
+.hitchgo-trip-planner {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hitchgo-trip-planner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #1e9a30, #32c347);
+}
+
+.hitchgo-trip-planner::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(30, 154, 48, 0.03);
+  z-index: 0;
+}
+
+.hitchgo-tabs {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hitchgo-tab {
+  padding: 12px 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hitchgo-tab.active {
+  color: #1e9a30;
+  font-weight: bold;
+}
+
+.hitchgo-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #1e9a30;
+}
+
+.hitchgo-tab:hover {
+  color: #1e9a30;
+}
+
+.hitchgo-tab-content {
+  display: none;
+}
+
+.hitchgo-tab-content.active {
+  display: block;
+}
+
+.hitchgo-planner-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1e9a30;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.hitchgo-planner-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #1e9a30;
+}
+
+.hitchgo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hitchgo-form-group {
+  flex: 1 1 280px;
+  max-width: 380px;
+  margin-bottom: 0.5rem;
+}
+
+.hitchgo-form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hitchgo-form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  background-color: #f9fcfa;
+  transition: all 0.3s ease;
+}
+
+.hitchgo-form-control:focus {
+  outline: none;
+  border-color: #1e9a30;
+  box-shadow: 0 0 0 3px rgba(30, 154, 48, 0.1);
+}
+
+.hitchgo-form-control::placeholder {
+  color: #aaa;
+}
+
+.hitchgo-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.hitchgo-input-group .hitchgo-form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.hitchgo-input-group-text {
+  padding: 0.8rem 1rem;
+  background-color: #f9fcfa;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: #555;
+}
+
+.hitchgo-btn-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.hitchgo-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #1e9a30 0%, #32c347 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(30, 154, 48, 0.2);
+}
+
+.hitchgo-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30, 154, 48, 0.3);
+}
+
+.hitchgo-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Special styling for date and number inputs */
+input[type="date"].hitchgo-form-control, 
+input[type="number"].hitchgo-form-control,
+input[type="time"].hitchgo-form-control,
+textarea.hitchgo-form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+textarea.hitchgo-form-control {
+  min-height: 100px;
+  border-radius: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hitchgo-trip-planner {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+  
+  .hitchgo-planner-title {
+    font-size: 1.8rem;
+  }
+}

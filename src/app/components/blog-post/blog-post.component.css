@@ -1,0 +1,107 @@
+
+  .hitchgo-blog-detail {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 20px;
+  }
+  
+  .hitchgo-blog-detail-header {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .hitchgo-blog-detail-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e9a30;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hitchgo-blog-detail-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e9a30, #32c347);
+  }
+  
+  .hitchgo-blog-detail-meta {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hitchgo-blog-detail-author {
+    font-weight: 500;
+    color: #1e9a30;
+  }
+  
+  .hitchgo-blog-detail-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .hitchgo-blog-detail-content {
+    line-height: 1.8;
+    color: #444;
+    font-size: 1.1rem;
+  }
+  
+  .hitchgo-blog-back-link {
+    display: inline-block;
+    background: transparent;
+    color: #1e9a30;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid #1e9a30;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+  .hitchgo-blog-back-link:hover {
+    background: #1e9a30;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 154, 48, 0.15);
+  }
+  
+  /* Default placeholder for when image is not available */
+  .hitchgo-blog-detail-placeholder {
+    height: 300px;
+    background: linear-gradient(45deg, #f5f5f5, #f0f0f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .hitchgo-blog-detail-placeholder-icon {
+    font-size: 4rem;
+    color: #ddd;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hitchgo-blog-detail-title {
+      font-size: 2rem;
+    }
+    
+    .hitchgo-blog-detail-content {
+      font-size: 1rem;
+    }
+  }

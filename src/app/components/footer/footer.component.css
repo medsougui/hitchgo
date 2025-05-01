@@ -1,0 +1,218 @@
+
+  /* HITCHGO Footer Styles */
+  .hitchgo-footer {
+    background: linear-gradient(135deg, #f9fcfa 0%, #f0f8f1 100%);
+    padding: 3rem 0 2rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    border-top: 4px solid #1e9a30;
+  }
+  
+  .hitchgo-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1e9a30, #32c347);
+  }
+  
+  .hitchgo-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .hitchgo-footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .hitchgo-footer-brand {
+    flex: 1 1 300px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hitchgo-footer-logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1e9a30;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .hitchgo-footer-tire-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #1e9a30;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    margin-left: -3px;
+  }
+  
+  .hitchgo-footer-tire-icon::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .hitchgo-footer-tire-icon::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #1e9a30;
+    border-radius: 50%;
+  }
+  
+  .hitchgo-footer-tagline {
+    font-size: 1rem;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hitchgo-footer-info {
+    flex: 1 1 300px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hitchgo-footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1e9a30;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .hitchgo-footer-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #1e9a30;
+  }
+  
+  .hitchgo-contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hitchgo-contact-icon {
+    margin-right: 10px;
+    color: #1e9a30;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hitchgo-contact-text {
+    flex: 1;
+  }
+  
+  .hitchgo-footer-links {
+    flex: 1 1 200px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hitchgo-footer-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hitchgo-footer-link-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .hitchgo-footer-link {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .hitchgo-footer-link:hover {
+    color: #1e9a30;
+    transform: translateX(3px);
+  }
+  
+  .hitchgo-footer-link::before {
+    content: "→";
+    margin-right: 6px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .hitchgo-footer-link:hover::before {
+    opacity: 1;
+  }
+  
+  .hitchgo-social-links {
+    display: flex;
+    margin-top: 1.5rem;
+  }
+  
+  .hitchgo-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #1e9a30;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .hitchgo-social-link:hover {
+    background-color: #1e9a30;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .hitchgo-footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+  }
+  
+  .hitchgo-footer-bottom p {
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hitchgo-footer-content {
+      flex-direction: column;
+    }
+    
+    .hitchgo-footer-brand, 
+    .hitchgo-footer-info, 
+    .hitchgo-footer-links {
+      flex: 1 1 100%;
+    }
+  }
