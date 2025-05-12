@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
   getLabels(lang: string) {
     return {
       en: {
-        tagline: 'Choose your way. Making transportation greener, smarter, and more collaborative.',
+        tagline: 'Choose your way and join us on a journey where every path we take together brings us closer to a sustainable tomorrow.',
         contactUs: 'Contact Us',
         address: '1234 HITCHGO Street, City, Country',
         phone: '(123) 456-7890',
@@ -37,7 +37,7 @@ export class FooterComponent implements OnInit {
         ecoTagline: 'Eco-Friendly • Collaborative • Responsible'
       },
       es: {
-        tagline: 'Elige tu camino. Haciendo el transporte más ecológico, inteligente y colaborativo.',
+        tagline: 'Elige tu camino y acompáñanos en un viaje donde cada paso que damos juntos nos acerca a un mañana sostenible.',
         contactUs: 'Contáctanos',
         address: '1234 Calle HITCHGO, Ciudad, País',
         phone: '(123) 456-7890',

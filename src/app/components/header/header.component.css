@@ -1,208 +1,276 @@
+/* header.component.css */
+/* HITCHGO Navigation Styles */
+.hitchgo-navbar {
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
 
-  /* HITCHGO Navigation Styles */
-  .hitchgo-navbar {
-    background: white;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-    padding: 0.5rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    font-family: 'Segoe UI', Arial, sans-serif;
-  }
-  
-  /* Add spacer for fixed navbar */
-  .hitchgo-navbar-spacer {
-    height: 60px; /* Adjust based on navbar height */
-    width: 100%;
-  }
-  
-  .hitchgo-navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .hitchgo-brand {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #1e9a30;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  .hitchgo-tire-icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #1e9a30;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: relative;
-    margin-left: -5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hitchgo-tire-icon::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 16px;
-    height: 16px;
-    background-color: white;
-    border-radius: 50%;
-  }
-  
-  .hitchgo-tire-icon::after {
-    content: "";
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    background-color: #1e9a30;
-    border-radius: 50%;
-  }
-  
+/* Add spacer for fixed navbar */
+.hitchgo-navbar-spacer {
+  height: 36px; /* Adjust based on navbar height */
+  width: 100%;
+}
+
+.hitchgo-navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hitchgo-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #1e9a30;
+  text-decoration: none;
+  position: relative;
+}
+
+.hitchgo-tire-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #1e9a30;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+  margin-left: -5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hitchgo-tire-icon::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.hitchgo-tire-icon::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  background-color: #1e9a30;
+  border-radius: 50%;
+}
+
+.hitchgo-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hitchgo-toggler-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #1e9a30;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hitchgo-toggler-icon::before,
+.hitchgo-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #1e9a30;
+  transition: all 0.3s ease;
+}
+
+.hitchgo-toggler-icon::before {
+  top: -8px;
+}
+
+.hitchgo-toggler-icon::after {
+  top: 8px;
+}
+
+.hitchgo-nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.hitchgo-nav-item {
+  margin: 0 5px;
+}
+
+.hitchgo-nav-link {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hitchgo-nav-link:hover {
+  color: #1e9a30;
+  background-color: rgba(30, 154, 48, 0.05);
+}
+
+.hitchgo-nav-link.active {
+  color: white;
+  background-color: #1e9a30;
+}
+
+/* Dropdown styling */
+.lang-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  min-width: 120px;
+  padding: 5px 0;
+  margin: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1001;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.flag-icon {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Scrolled State */
+.hitchgo-navbar.scrolled {
+  padding: 0.3rem 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
   .hitchgo-toggler {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-  }
-  
-  .hitchgo-toggler-icon {
     display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #1e9a30;
-    position: relative;
-    transition: all 0.3s ease;
   }
   
-  .hitchgo-toggler-icon::before,
-  .hitchgo-toggler-icon::after {
-    content: "";
+  .hitchgo-navbar-collapse {
     position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: #1e9a30;
-    transition: all 0.3s ease;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
   }
   
-  .hitchgo-toggler-icon::before {
-    top: -8px;
-  }
-  
-  .hitchgo-toggler-icon::after {
-    top: 8px;
-  }
-  
-  .hitchgo-nav {
-    display: flex;
-    align-items: center;
+  .hitchgo-navbar-collapse.show {
+    max-height: 500px; /* Increased to accommodate dropdown */
   }
   
   .hitchgo-nav-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+    padding: 1rem 0;
   }
   
   .hitchgo-nav-item {
-    margin: 0 5px;
+    margin: 0;
+    width: 100%;
   }
   
   .hitchgo-nav-link {
+    padding: 12px 20px;
+    border-radius: 0;
+  }
+  
+  /* Adjust spacer for mobile */
+  .hitchgo-navbar-spacer {
+    height: 60px;
+  }
+  
+  /* Specific mobile styling for language dropdown */
+  .lang-dropdown {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .lang-dropdown .dropdown-toggle {
+    width: 100%;
+    padding: 12px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .lang-dropdown .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+  }
+  
+  .lang-dropdown .dropdown-menu.show {
     display: block;
-    padding: 10px 16px;
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 30px;
-    transition: all 0.3s ease;
   }
   
-  .hitchgo-nav-link:hover {
-    color: #1e9a30;
-    background-color: rgba(30, 154, 48, 0.05);
+  .lang-dropdown .dropdown-item {
+    padding: 10px;
   }
-  
-  .hitchgo-nav-link.active {
-    color: white;
-    background-color: #1e9a30;
-  }
-  
-  /* Scrolled State */
-  .hitchgo-navbar.scrolled {
-    padding: 0.3rem 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
-  
-  /* Media Queries */
-  @media (max-width: 991px) {
-    .hitchgo-toggler {
-      display: block;
-    }
-    
-    .hitchgo-navbar-collapse {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-    
-    .hitchgo-navbar-collapse.show {
-      max-height: 300px;
-    }
-    
-    .hitchgo-nav-list {
-      flex-direction: column;
-      padding: 1rem 0;
-    }
-    
-    .hitchgo-nav-item {
-      margin: 0;
-      width: 100%;
-    }
-    
-    .hitchgo-nav-link {
-      padding: 12px 20px;
-      border-radius: 0;
-    }
-    
-    /* Adjust spacer for mobile */
-    .hitchgo-navbar-spacer {
-      height: 60px;
-    }
-    .lang-buttons button {
-      background: none;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 4px 8px;
-    }
-    
-    .lang-buttons .active-lang {
-      border-bottom: 2px solid #000;
-    }
-    
-  }
-  
+}

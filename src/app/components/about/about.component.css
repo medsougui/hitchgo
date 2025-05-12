@@ -115,10 +115,15 @@
   .vision-section {
     background-color: #f8f8f8;
     padding: 40px 0;
-    margin: 40px 0;
+    margin: 0px 0;
     position: relative;
   }
-  
+  .values-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    margin: 0px 0;
+    position: relative;
+  }
   .vision-section::before {
     content: "";
     position: absolute;
@@ -163,8 +168,14 @@
   }
   
   .team-image {
-    height: 180px;
+    height: 230px;
     background-color: #e0e0e0;
+  }
+  .team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   
   .team-content {

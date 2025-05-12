@@ -66,7 +66,7 @@ export class ServicesComponent implements OnInit {
         price: 'Price per Seat',
         notes: 'Additional Notes',
         publish: 'Publish Ride',
-        currency: 'TND'
+        currency: '£'
       },
       es: {
         findRide: 'Buscar un viaje',
@@ -83,7 +83,7 @@ export class ServicesComponent implements OnInit {
         price: 'Precio por asiento',
         notes: 'Notas adicionales',
         publish: 'Publicar viaje',
-        currency: 'TND'
+        currency: '£'
       }
     }[lang];
   }
