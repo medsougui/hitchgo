@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
         collaborativeText: 'Share rides, connect with others, and help make a better world through community-driven transportation solutions.',
         responsibleTitle: 'Responsible',
         responsibleText: 'Built for people and planet. Travel with purpose, not pollution. Make every journey count toward a sustainable future.',
-        ctaTitle: 'Need Helpto travel and discover Spain ?',
+        ctaTitle: 'Need Help to travel and discover Spain ?',
         contactBtn: 'We’re Here for You',
         latestBlogTitle: 'Latest from Our Blog',
         by: 'By',
