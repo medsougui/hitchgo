@@ -32,12 +32,18 @@ export class BlogComponent implements OnInit {
       en: {
         blogTitle: 'Our Blog',
         readMore: 'Read More',
-        by: 'By'
+        by: 'By',
+         joinJourney: 'Join Our Journey',
+        joinJourneyDescription: 'Be part of the transportation revolution and help us create a greener future.',
+        getStarted: 'Get Started'
       },
       es: {
         blogTitle: 'Nuestro Blog',
         readMore: 'Leer más',
-        by: 'Por'
+        by: 'Por',
+        joinJourney: 'Únete a Nuestra Trayectoria',
+        joinJourneyDescription: 'Únete a la revolución del transporte y ayúdanos a construir un futuro más verde.',
+        getStarted: 'Comenzar'
       }
     }[lang];
   }

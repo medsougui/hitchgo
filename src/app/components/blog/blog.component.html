@@ -19,6 +19,16 @@
         <p class="hitchgo-blog-excerpt">{{ post.content | slice:0:150 }}...</p>
         <a [routerLink]="['/blog', post.id]" class="hitchgo-blog-link">{{ labels.readMore }}</a>
       </div>
+      
     </div>
   </div>
+ 
 </div>
+ <div class="cta-section">
+      <div class="container">
+        <h2 class="section-title cta-title">{{ labels.joinJourney }}</h2>
+        <p>{{ labels.joinJourneyDescription }}</p>
+        <a href="/services" class="cta-button">{{ labels.getStarted }}</a>
+      </div>
+    </div>
+

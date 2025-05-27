@@ -11,7 +11,45 @@
     margin-bottom: 2.5rem;
     position: relative;
   }
-  
+  .cta-section {
+    background-color: #1e9a30;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 50px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-title::after {
+    display: none;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: white;
+    color: #1e9a30;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #1e9a30;
+    color: white;
+    border: 2px solid white;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   .hitchgo-blog-title {
     font-size: 2.2rem;
     font-weight: bold;

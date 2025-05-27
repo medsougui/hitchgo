@@ -51,4 +51,33 @@
       <a href="/contact" class="cta-btn">{{ labels.contactBtn }}</a>
     </div>
   </section>
+
+  <!-- Blog Preview Section -->
+  <section class="blog-preview-section">
+    <div class="hitchgo-container">
+      <h2 class="section-title">{{ labels.latestBlogTitle }}</h2>
+      <div class="blog-preview-grid">
+        <div class="hitchgo-blog-card" *ngFor="let post of blogPosts.slice(0, 3)">
+          <img *ngIf="post.imageUrl" [src]="post.imageUrl" class="hitchgo-blog-image" alt="{{ post.title }}">
+          <div *ngIf="!post.imageUrl" class="hitchgo-blog-placeholder">
+            <span class="hitchgo-blog-placeholder-icon">📝</span>
+          </div>
+          <div class="hitchgo-blog-content">
+            <h3 class="hitchgo-blog-card-title">{{ post.title }}</h3>
+            <div class="hitchgo-blog-meta">
+              {{ labels.by }} <span class="hitchgo-blog-author">{{ post.author }}</span>
+              &nbsp;•&nbsp; {{ post.publishDate | date:'longDate' }}
+            </div>
+            <p class="hitchgo-blog-excerpt">{{ post.content | slice:0:150 }}...</p>
+            <a [routerLink]="['/blog', post.id]" class="hitchgo-blog-link">{{ labels.readMore }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="view-all-container">
+        <a routerLink="/blog" class="view-all-link">{{ labels.viewAllPosts }}</a>
+      </div>
+    </div>
+  </section>
 </div>
+
+

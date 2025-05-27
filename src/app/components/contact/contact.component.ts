@@ -29,7 +29,10 @@ export class ContactComponent implements OnInit {
         email: 'Email',
         message: 'How can we help you?',
         submit: 'Submit',
-        requiredSymbol: '*'
+        requiredSymbol: '*',
+         joinJourney: 'Join Our Journey',
+        joinJourneyDescription: 'Be part of the transportation revolution and help us create a greener future.',
+        getStarted: 'Get Started'
       },
       es: {
         contactTitle: 'Contáctanos',
@@ -39,7 +42,10 @@ export class ContactComponent implements OnInit {
         email: 'Correo electrónico',
         message: '¿Cómo podemos ayudarte?',
         submit: 'Enviar',
-        requiredSymbol: '*'
+        requiredSymbol: '*',
+        joinJourney: 'Únete a Nuestra Trayectoria',
+        joinJourneyDescription: 'Únete a la revolución del transporte y ayúdanos a construir un futuro más verde.',
+        getStarted: 'Comenzar'
       }
     }[lang];
   }
